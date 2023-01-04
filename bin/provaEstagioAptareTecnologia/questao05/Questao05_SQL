@@ -1,0 +1,32 @@
+	
+	
+	Utilizando a mesma database acima, SISGEP, criar uma consulta que retorne como 
+	resultado todos os atendimentos cadastrados no período de junho de 2020, 
+	agrupados por assunto, classificação, exibindo os seguintes campos: Nome do 
+	Assunto, Nome da Classificação e Quantidade. Deverá ordenar por Nome 
+	Classificação e Assunto Crescente. 
+		
+		Tabelas envolvidas: 
+			SC_CAD.TBL_ATN -> Tabela de Atendimento
+			SC_CAD.TBL_APA -> Tabela de Assunto
+			SC_CAD.TBL_CLA -> Tabela de Classificação
+
+
+
+SELECT
+	apa.nm_apa, cla.nm_cla, COUNT(atn.cd_atn AS Quantidade
+	
+FROM
+	sc_cad.tbl_atn AS atn
+	
+INNER JOIN
+	sc_cad.tbl_apa AS apa ON apa.cd_apa = atn.cd_apa
+		 
+INNER JOIN
+	sc_cad.tbl_cla AS cla ON cla.cd_cla = atn.cd_cla
+
+WHERE
+	atend.dt_inc_usr BETWEEN '2020-06-01' AND '2020-06-30'
+	
+ORDER BY
+	apa.nm_apa ASC
