@@ -52,7 +52,7 @@ Projeto JAVA - Seleção Estágio - Aptare Tecnologia
           SC_CAD.TBL_ATN -> Tabela de Atendimento
           SC_CAD.TBL_MNF -> Tabela de Manifestante
           SC_CAD.TBL_APA -> Tabela de Assunto
-          C_CAD.TBL_CLA  -> Tabela de Classificação
+          SC_CAD.TBL_CLA  -> Tabela de Classificação
           
 # Questão.05 - SQL         
 ## Utilizando a mesma database acima, SISGEP, 
