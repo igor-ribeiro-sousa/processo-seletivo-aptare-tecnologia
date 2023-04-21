@@ -1,2 +1,30 @@
 
-/bin/
+# Arquivos de compilação
+bin/
+target/
+
+# Arquivos de configuração do Eclipse
+.project
+.classpath
+.settings/
+
+# Arquivos de log e backup
+*.log
+*.bak
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+*.cache
+
+# Arquivos de IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Arquivos de dependências do Maven
+pom.xml.*
+*.jar
+
