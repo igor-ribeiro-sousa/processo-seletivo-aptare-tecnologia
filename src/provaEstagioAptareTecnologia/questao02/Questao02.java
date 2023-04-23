@@ -28,11 +28,11 @@ import java.util.stream.Collectors;
 public class Questao02 {
 
 	public final static int ORDEM_CRESCENTE = 1;
-	public final static int ORDEM_DECRESENTE = 2;
+	public final static int ORDEM_DECRESCENTE = 2;
 
 	// Aplicando ordem
 	public static void condicionalOrdem(String[] numeros, String ordem) {
-		ordenar(adicionarNalista(numeros), ordem.equalsIgnoreCase("CRESCENTE") ? ORDEM_CRESCENTE : ORDEM_DECRESENTE);
+		ordenar(adicionarNalista(numeros), ordem.equalsIgnoreCase("CRESCENTE") ? ORDEM_CRESCENTE : ORDEM_DECRESCENTE);
 	}
 
 	// Ordenando Lista
@@ -55,14 +55,14 @@ public class Questao02 {
 		List<Integer> numerosPares = lista.stream().filter(numeros -> numeros % 2 == 0).collect(Collectors.toList());
 		List<Integer> numerosImpares = lista.stream().filter(numeros -> numeros % 2 != 0).collect(Collectors.toList());
 
-		imprimir("pares", numerosPares);
-		imprimir("impares", numerosImpares);
+		imprimir("Pares", numerosPares);
+		imprimir("Ímpares", numerosImpares);
 	}
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("Digite os numeros");
+		System.out.println("Números :");
 
 		String entradaNumeros = scan.nextLine();
 		if (!entradaNumeros.matches("^\\d+(,\\d+)*$")) {
@@ -72,7 +72,7 @@ public class Questao02 {
 		}
 		String[] numeros = entradaNumeros.split(",");
 
-		System.out.println("Qual a ordem ? ");
+		System.out.println("Ordem de Exibição :");
 		String entradaOrdem = scan.nextLine().trim();
 		if (!entradaOrdem.equalsIgnoreCase("CRESCENTE") && !entradaOrdem.equalsIgnoreCase("DECRESCENTE")) {
 			System.out.println("Ordem inválida. Digite 'CRESCENTE' ou 'DECRESCENTE'.");
@@ -87,9 +87,9 @@ public class Questao02 {
 
 	// Imprimindo lista
 	public static void imprimir(String tipoNumeros, List<Integer> lista) {
-		System.out.println("Quantidade de numeros " + tipoNumeros + ":" + lista.size());
-		System.out.print("Numeros " + tipoNumeros + ":");
+		System.out.println("Quantidade de Números " + tipoNumeros + ":" + lista.size());
+		System.out.print("Exibindo Números " + tipoNumeros + ":");
 		System.out.println(String.join(", ", lista.stream().map(String::valueOf).collect(Collectors.toList())));
-
+p
 	}
 }
